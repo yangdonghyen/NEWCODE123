@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px; /* 드래그 앤 드롭 영역의 높이를 설정합니다 */
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 170px; /* 텍스트를 수직 중앙에 위치시킵니다 */
+    cursor: pointer; /* 드래그 앤 드롭 영역에 마우스를 올리면 커서를 포인터로 변경합니다 */
+}
+
+/* 드래그 앤 드롭 영역과 form 내의 highlight 스타일을 통합합니다 */
+.highlight, #drop-area.highlight {
+    border-color: blue;
+    background-color: #f0f8ff;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 숨겨진 파일 입력 필드에 대한 스타일입니다. */
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 파일 입력 필드에 대한 레이블 스타일입니다. */
+input[type="file"] + label {
+    font-weight: 700;
+    color: white;
+    background-color: #008CBA;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+select {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
