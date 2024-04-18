@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>File Recovery Service</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>File Recovery Service</h1>
     <div id="drop-area" class="drop-area">
-        <p>Drag & Drop folders here or click to select folders</p>
+      <p>Drag & Drop folders here or click to select folders</p>
+      <input
+        type="file"
+        id="file-input"
+        webkitdirectory
+        directory
+        multiple
+        style="display: none"
+      />
+      <!-- 버튼을 input 태그와 같은 div 안에 포함 -->
+      <button onclick="document.getElementById('file-input').click()">
+        Select Folder
+      </button>
     </div>
-    <input type="text" id="folder-path" name="folder-path" placeholder="Folder path">
+    <input
+      type="text"
+      id="folder-path"
+      name="folder-path"
+      placeholder="Folder path"
+    />
     <button id="recover-button">Recover Files</button>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
